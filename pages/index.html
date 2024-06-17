@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de boleto de GRU</title>
+  </head>
+  <body>
+    <header>
+      <h1>Gerador de GRU Simples</h1>
+      <p>Preencha os campos abaixo para gerar um boleto</p>
+    </header>
+    <main>
+      <form id="gruForm" class="rendered-form">
+        <div class="formbuilder-text form-group field-contribuinte">
+          <label for="contribuinte" class="formbuilder-text-label"
+            ><span
+              style="
+                color: rgb(51, 51, 51);
+                font-family: Rawline, Raleway, sans-serif;
+                font-weight: 600;
+                text-wrap: nowrap;
+              "
+              >CPF ou CNPJ do Contribuinte</span
+            ><span class="tooltip-element" tooltip="Somente números"
+              >?</span
+            ></label
+          >
+          <input
+            type="text"
+            placeholder="CPF ou CNPJ"
+            name="contribuinte"
+            access="false"
+            maxlength="14"
+            id="contribuinte"
+            title="Somente números"
+          />
+        </div>
+        <div class="formbuilder-text form-group field-nomeContribuinte">
+          <label for="nomeContribuinte" class="formbuilder-text-label"
+            ><span
+              _ngcontent-ng-c2495112279=""
+              class="texto"
+              style="
+                padding-right: 10px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-wrap: nowrap;
+                color: rgb(51, 51, 51);
+                font-family: Rawline, Raleway, sans-serif;
+                font-weight: 600;
+              "
+              >Nome do Contribuinte</span
+            ></label
+          >
+          <input
+            type="text"
+            placeholder="Digite o nome do contribuinte ou razão social da empresa"
+            name="nomeContribuinte"
+            access="false"
+            maxlength="50"
+            id="nomeContribuinte"
+          />
+        </div>
+        <div class="formbuilder-text form-group field-numReferencia">
+          <label for="numReferencia" class="formbuilder-text-label"
+            ><span
+              style="
+                color: rgb(51, 51, 51);
+                font-family: Rawline, Raleway, sans-serif;
+                font-weight: 600;
+                text-wrap: nowrap;
+              "
+              >Número de Referência</span
+            ><span
+              class="tooltip-element"
+              tooltip="O número de referência é usado pelos Órgãos Públicos para facilitar na identificação de um determinado pagamento. É comum usar o número de processos, de inscrição em concurso, de autuação de multas, entre outros como número de referência."
+              >?</span
+            ></label
+          >
+          <input
+            type="text"
+            placeholder="Digite o número de referência, se existir"
+            name="numReferencia"
+            access="false"
+            maxlength="20"
+            id="numReferencia"
+            title="O número de referência é usado pelos Órgãos Públicos para facilitar na identificação de um determinado pagamento. É comum usar o número de processos, de inscrição em concurso, de autuação de multas, entre outros como número de referência."
+          />
+        </div>
+        <div class="formbuilder-text form-group field-competencia">
+          <label for="competencia" class="formbuilder-text-label">
+            <br-label
+              _ngcontent-ng-c531643627=""
+              _nghost-ng-c2495112279=""
+              style="
+                color: rgb(51, 51, 51);
+                font-family: Rawline, Raleway, sans-serif;
+              "
+            >
+              <label
+                _ngcontent-ng-c2495112279=""
+                title="Competência"
+                for="id3cfb371b36fdda"
+                style="
+                  display: flex;
+                  color: var(--color);
+                  font-size: var(--font-size-scale-base);
+                  font-weight: var(--font-weight-semi-bold);
+                  line-height: 20px;
+                  width: 368px;
+                  flex-wrap: nowrap;
+                  padding-bottom: 4px;
+                  align-items: baseline;
+                "
+                ><span
+                  _ngcontent-ng-c2495112279=""
+                  class="texto"
+                  style="
+                    padding-right: 10px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                  "
+                  >Competência</span
+                ></label
+              > </br-label
+            ><span
+              style="
+                color: rgb(51, 51, 51);
+                font-family: Rawline, Raleway, sans-serif;
+              "
+            ></span
+          ></label>
+          <input
+            type="text"
+            placeholder="MM/YYYY"
+            name="competencia"
+            access="false"
+            maxlength="7"
+            id="competencia"
+          />
+        </div>
+        <div class="formbuilder-text form-group field-vencimento">
+          <label for="vencimento" class="formbuilder-text-label"
+            ><span
+              style="
+                color: rgb(51, 51, 51);
+                font-family: Rawline, Raleway, sans-serif;
+                font-weight: 600;
+                text-wrap: nowrap;
+              "
+              >Vencimento</span
+            ><span
+              class="tooltip-element"
+              tooltip="Data de vencimento do boleto"
+              >?</span
+            ></label
+          >
+          <input
+            type="text"
+            placeholder="DD/MM/YYYY"
+            name="vencimento"
+            access="false"
+            maxlength="10"
+            id="vencimento"
+            title="Data de vencimento do boleto"
+          />
+        </div>
+        <div class="">
+          <label for="undefined" class="formbuilder-textarea-label"
+            >Informações<span
+              class="tooltip-element"
+              tooltip="Instruções de pagamento para contribuinte"
+              >?</span
+            ></label
+          >
+          <textarea
+            type="textarea"
+            placeholder="As informações inseridas nessa guia são de exclusiva responsabilidade do contribuinte, que deverá, em caso de dúvidas, consultar a Unidade Gestora Arrecadadora. "
+            access="false"
+            rows="7"
+            id="control-6870509"
+            title="Instruções de pagamento para contribuinte"
+          ></textarea>
+        </div>
+        <div class="formbuilder-number form-group field-valorPrincipal">
+          <label for="valorPrincipal" class="formbuilder-number-label"
+            ><span
+              _ngcontent-ng-c2495112279=""
+              class="texto"
+              style="
+                padding-right: 10px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-wrap: nowrap;
+                color: rgb(51, 51, 51);
+                font-family: Rawline, Raleway, sans-serif;
+                font-weight: 600;
+              "
+              >Valor Principal</span
+            ></label
+          >
+          <input
+            type="number"
+            placeholder="Somente números. Sem vírgula"
+            name="valorPrincipal"
+            access="false"
+            min="0"
+            max="99999999"
+            step="0"
+            id="valorPrincipal"
+          />
+        </div>
+        <input type="submit" value="Gerar" />
+      </form>
+    </main>
+    <script src="../scripts/form_submit.js"></script>
+  </body>
+</html>

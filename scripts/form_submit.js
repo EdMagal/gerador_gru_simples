@@ -5,7 +5,7 @@ gruForm.addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent the default form submission behavior
 
   const formData = new FormData(gruForm);
-  console.log(formData);
+  console.log(formData.entries());
   // Itera sobre os dados do formulário
   for (let [field, value] of formData.entries()) {
     console.log(field + ": " + value);
